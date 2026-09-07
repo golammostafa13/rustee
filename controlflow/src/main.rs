@@ -51,4 +51,36 @@ fn main() {
     for element in arr {
         println!("element = {element}");
     }
+
+    enum Coin {
+        one,
+        two,
+        five
+    }
+
+    fn check_coint_type(coin: Coin) -> i32 {
+        match coin {
+            Coin::one => 1,
+            Coin::two => 2,
+            Coin::five => 5
+        }
+    }
+
+    let sampleCoin:Coin = Coin::two;
+
+    println!("Coin type {}", check_coint_type(sampleCoin));
+
+    // FizzBuzz problem
+    // print 1 to 100, but multiple of 3 will print Fizz, multiple of 5 will print Buzz, multiple of 3 and 5 will print FizzBuzz
+    for number in 1..=100 {
+        if number % 3 == 0 && number % 5 == 0 {
+            println!("FizzBuzz");
+        } else if number % 3 == 0 {
+            println!("Fizz");
+        } else if number % 5 == 0 {
+            println!("Buzz");
+        } else {
+            println!("{number}");
+        }
+    }
 }
