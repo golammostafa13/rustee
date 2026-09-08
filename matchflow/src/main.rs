@@ -52,4 +52,15 @@ fn main() {
         Some(n)          => println!("6) small: {n}"),
         None             => println!("6) nothing"),
     }
+
+    fn plus_one(v: Option<i32>) -> Option<i32> {
+        match v {
+            Some(v) => Some(v + 1),
+            None => None
+        }
+    }
+
+    let five: Option<i32> = Some(5);
+    let six: Option<i32> = plus_one(five);
+    println!("{:?}", six.unwrap());
 }
