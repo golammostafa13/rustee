@@ -51,15 +51,6 @@ enum IpVersionKind {
     V6
 }
 
-impl MyEnum {
-    fn do_something(&self) -> Whatever {
-        match self {
-            MyEnum::VariantA => { /* handle A */ }
-            MyEnum::VariantB(data) => { /* handle B, using data */ }
-            MyEnum::VariantC { field } => { /* handle C, using field */ }
-        }
-    }
-} 
 fn main() {
     // simple enum + method
     let d = Direction::North;
