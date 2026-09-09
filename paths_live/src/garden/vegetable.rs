@@ -1,10 +1,5 @@
 #[derive(Debug, Clone, Copy)]
-pub enum Season {
-    Summer,
-    Winter,
-    Spring,
-    Autumn,
-}
+pub enum Season { Summer, Winter, Spring, Autumn }
 
 impl Season {
     fn price_change(&self) -> i32 {
@@ -18,16 +13,12 @@ impl Season {
 }
 
 #[derive(Debug)]
-pub struct Alu {
-    pub name: String,
-    pub price: i32,
-}
+pub struct Alu { pub name: String, pub price: i32 }
 
 impl Alu {
     pub fn new(name: &str, price: i32) -> Alu {
         Alu { name: String::from(name), price }
     }
-
     pub fn apply_season(&mut self, season: Season) {
         self.price += season.price_change();
     }
