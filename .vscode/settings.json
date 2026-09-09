@@ -1,0 +1,21 @@
+{
+  // This repo has no root Cargo.toml, so rust-analyzer needs each crate listed
+  // explicitly. Everything else (clippy on save, inlay hints, Error Lens)
+  // lives in the global user settings.
+  "rust-analyzer.linkedProjects": [
+    "collections/Cargo.toml",
+    "controlflow/Cargo.toml",
+    "datatypes/Cargo.toml",
+    "enums/Cargo.toml",
+    "hellowworld/hello_world/Cargo.toml",
+    "livecli/Cargo.toml",
+    "matchflow/Cargo.toml",
+    "ownership/Cargo.toml",
+    "paths_live/Cargo.toml",
+    "rust-modules/Cargo.toml",
+    "slice/Cargo.toml",
+    "structs/Cargo.toml",
+    "usekeyword/Cargo.toml",
+    "variables/Cargo.toml"
+  ]
+}
